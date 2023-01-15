@@ -12,7 +12,7 @@ A equipe optou em utilizar a linguagem r-educ, que é uma linguagem do próprio 
 
 ## ✒️ Autores
 
-* **Cauã Campos**(https://github.com/c-Campos-ss)
+* [**Cauã Campos**](https://github.com/c-Campos-ss)
 * **Miguel Brum**
 * **Raul Rodrigues**
 * **Roberta Marciele**
