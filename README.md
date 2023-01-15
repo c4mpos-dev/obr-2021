@@ -1,4 +1,4 @@
-# OBR (Olimoíada Brasileira de Robótica) - 20/21
+# OBR (Olimpíada Brasileira de Robótica) - 20/21
 A pasta possui os códigos utilizados pela equipe SkyDroid - RJ na OBR virtual simulação 2020 e 2021.
 
 ## 🚀 Começando
