@@ -1,0 +1,487 @@
+tarefa  pegarvitima{
+        tras(100)
+        esperar(280)
+        rotacionar (500, 90)
+        girarbaixo(400)
+        baixar(600)
+    enquanto (temvitima() == falso) farei {
+        frente(300)
+    }
+        frente(250)
+        esperar(800)
+        parar()
+        velocidadeatuador(50)
+        levantar(1200)
+        frente(50)
+        esperar(100)
+        girarcima(900)
+        parar()
+        tras(50)
+        esperar(5000)
+}
+
+tarefa  entregarvitimaAS1{
+    enquanto (direcao() < 223 ou direcao() > 227) farei {
+        esquerda(1000)
+    }
+    enquanto (luz(5) >= 12) farei {
+       se (ultra(1) < 20 e ultra(3) < 20) entao{
+            tras(50)
+            esperar(2000)
+            rotacionar(500, 90)
+            frente(100)
+            esperar(2500)
+            rotacionar(500, 0-90)
+        }senao se (luz(5) < 65 e ultra(1) > 80) entao {
+           tras(50)
+           esperar(700)
+           rotacionar(500, 60)
+           frente(100)
+           esperar(700)
+           rotacionar(500, 0-60)          
+       }senao{
+           frente(80)
+       }     
+    }
+        parar()
+        frente(100)
+        esperar(200)
+        rotacionar (500, 0-90)
+    se (ultra(1) > 70) entao {
+        enquanto (ultra(1) > 70) farei {
+            frente(70)
+        }
+    }senao{                  
+        enquanto (ultra(1) < 64) farei {
+            tras(70)
+        }
+    }
+        rotacionar(500, 90)
+        frente(50)
+        esperar(100)                                             
+        velocidadeatuador(150)
+        baixar(300)
+        parar()
+        esperar(3000)
+}
+
+tarefa  entregarvitimaAS2{
+    enquanto (direcao() < 313 ou direcao() > 317) farei {
+        esquerda(1000)
+    }
+    enquanto (luz(5) >= 12) farei {
+        se (ultra(1) < 20 e ultra(3) < 20) entao{
+            tras(50)
+            esperar(2000)
+            rotacionar(500, 90)
+            frente(100)
+            esperar(2500)
+            rotacionar(500, 0-90)
+        }senao se (luz(5) < 65 e ultra(1) > 80) entao {
+           tras(50)
+           esperar(700)
+           rotacionar(500, 60)
+           frente(100)
+           esperar(700)
+           rotacionar(500, 0-60)          
+       }senao{
+           frente(80)
+       }
+    }
+        parar()
+        frente(100)
+        esperar(200)
+        rotacionar (500, 0-90)
+    se (ultra(1) > 70) entao {
+        enquanto (ultra(1) > 70) farei {
+            frente(70)
+        }
+    }senao{                  
+        enquanto (ultra(1) < 64) farei {
+            tras(70)
+        }
+    }
+        rotacionar(500, 90)
+        frente(50)
+        esperar(100)                                                  
+        velocidadeatuador(150)
+        baixar(300)
+        parar()
+        esperar(3000)
+}
+
+tarefa  entregarvitimaAS3{
+    enquanto (direcao() < 43 ou direcao() > 47) farei {
+        esquerda(1000)
+    }
+    enquanto (luz(5) >= 12) farei {
+        se (ultra(1) < 20 e ultra(3) < 20) entao{
+            tras(50)
+            esperar(2000)
+            rotacionar(500, 90)
+            frente(100)
+            esperar(2500)
+            rotacionar(500, 0-90)
+        }senao se (luz(5) < 65 e ultra(1) > 80) entao {
+           tras(50)
+           esperar(700)
+           rotacionar(500, 60)
+           frente(100)
+           esperar(700)
+           rotacionar(500, 0-60)          
+       }senao{
+           frente(80)
+       }
+    }
+        parar()
+        frente(100)
+        esperar(200)
+        rotacionar (500, 0-90)
+    se (ultra(1) > 70) entao {
+        enquanto (ultra(1) > 70) farei {
+            frente(70)
+        }
+    }senao{                  
+        enquanto (ultra(1) < 64) farei {
+            tras(70)
+        }
+    }
+        rotacionar(500, 90)
+        frente(50)
+        esperar(100)                                              
+        velocidadeatuador(150)
+        baixar(300)
+        parar()
+        esperar(3000)
+}
+
+
+tarefa  dpsdaentrega{   
+        parar()
+        levantar(800)
+        rotacionar(500, 90)
+    enquanto (ultra(1) < 133) farei {
+        tras(100)
+    }
+        rotacionar(500, 0-45)
+}
+
+
+tarefa  AS1{
+    enquanto (ultra(1) < 240) farei {
+        enquanto (ultra(2) > 235) farei {
+            se (ultra(1) > 245) entao {
+                interromper()
+            }senao{    
+                tras(300)
+            }
+        }
+            parar()
+            esperar(10)
+        se (ultra(2) < 235 e ultra(2) > 50) entao {
+            pegarvitima()
+            entregarvitimaAS1()
+            dpsdaentrega()
+        }senao{
+            tras(300)
+            esperar(100)
+        }         
+    }
+            parar()
+            rotacionar(500, 0-90)
+            tras(300)
+            esperar(800)
+        enquanto (ultra(2) > 235) farei {
+            tras(300)  
+        }
+            parar()
+            esperar(10)
+        se (ultra(2) < 235 e ultra(2) > 50) entao {
+            pegarvitima()
+            entregarvitimaAS1()       
+            dpsdaentrega()  
+        } senao {
+            tras(300)
+            esperar(100)
+    }     
+}
+
+tarefa  AS2{
+    enquanto (ultra(1) < 245) farei {
+        enquanto (ultra(2) > 235) farei {
+            se (ultra(1) > 245) entao {
+                interromper()
+            }senao{    
+                tras(300)
+            }
+        }
+            parar()
+            esperar(10)
+        se (ultra(2) < 235 e ultra(2) > 50) entao {
+            pegarvitima()
+            entregarvitimaAS2()       
+            dpsdaentrega()  
+        } senao {
+            tras(300)
+            esperar(100)
+        }  
+     
+    }
+        parar()
+        rotacionar(500, 0-90)
+        tras(300)
+        esperar(800)
+    enquanto (ultra(2) > 235) farei {
+        tras(300)  
+    }
+        parar()
+        esperar(10)
+    se (ultra(2) < 235 e ultra(2) > 50) entao {
+        pegarvitima()
+        entregarvitimaAS2()       
+        dpsdaentrega()  
+    } senao {
+        tras(300)
+        esperar(100)
+    }    
+        
+}
+
+tarefa  AS3{
+    enquanto (ultra(1) < 240) farei {
+        enquanto (ultra(2) > 235) farei {
+            se (ultra(1) > 245) entao {
+                interromper()
+            }senao{    
+                tras(300)
+            }
+        }
+            parar()
+            esperar(10)
+        se (ultra(2) < 235 e ultra(2) > 50) entao {
+            pegarvitima()
+            entregarvitimaAS3()        
+            dpsdaentrega()  
+        }senao{
+            tras(300)
+            esperar(100)
+        }         
+    }
+        parar()
+        rotacionar(500, 0-90)
+        tras(300)
+        esperar(800)
+    enquanto (ultra(2) > 235) farei {
+        tras(300)  
+    }
+        parar()
+        esperar(10)
+    se (ultra(2) < 235 e ultra(2) > 50) entao {
+        pegarvitima()
+        entregarvitimaAS3()       
+        dpsdaentrega()  
+    } senao {
+        tras(300)
+        esperar(100)
+    }
+        
+}
+
+tarefa rampa{ 
+        se(inclinacao() >= 300 e inclinacao() <= 352 e ultra(3) <= 20)entao{            
+            acenderled("VERDE")
+            baixar(300)
+            apagarled()
+    enquanto(inclinacao() >= 300 e inclinacao() <= 359)farei{
+        se (luz(3) <= 26) entao {
+                mover (200,negativo(200)) 
+        }senao se (luz(2) <= 26) entao {
+                mover (negativo(200),200)
+        }senao{
+                frente(150)
+        }
+    }
+                baixar(300)
+                parar()
+                esperar(100)
+        enquanto (ultra(1) >= 110) farei {
+                frente(300)
+        }
+                parar()
+                levantar(800)
+                girarcima(400)
+                frente(200)
+                esperar(600)
+                parar()
+                esperar(1000)
+        se (cor(5) == "PRETO") entao {
+                tras(100)
+                esperar(300)
+                AS1()
+                              
+        }senao{
+            enquanto (direcao() < 268 ou direcao() > 272) farei {
+                esquerda(1000)
+            }
+            enquanto (ultra(1) > 5) farei {
+                frente(300)
+            }
+                rotacionar(500, 90)
+                girarbaixo(400)
+                baixar(900)
+                parar()
+                esperar(100)
+            enquanto (ultra(1) >= 110) farei {
+                frente(300)
+            }
+                parar()
+                levantar(800)
+                girarcima(400)
+                frente(200)
+                esperar(600)
+                parar()
+                esperar(1000)
+            se (cor(5) == "PRETO") entao {
+                    tras(100)
+                    esperar(300)
+                    AS2()                                
+            } senao {
+                enquanto (direcao() > 2) farei {
+                    esquerda(1000)
+                }
+                enquanto (ultra(1) > 5) farei {
+                    frente(300)
+                }
+                    rotacionar(500, 90)
+                    escrever(1, "To Virando!!")
+                    girarbaixo(400)
+                    baixar(900)
+                    parar()
+                    esperar(100)
+                 enquanto (ultra(1) >= 110) farei {
+                    frente(300)
+                }       
+                    parar()
+                    levantar(800)
+                    girarcima(400)
+                    frente(200)
+                    esperar(400)
+                    tras(100)
+                    esperar(300)
+                    AS3()
+                }                                
+            }                            
+        }
+    
+    }                                                                                    
+  
+                    
+tarefa obstaculo{
+        se (ultra(1) <= 8) entao {
+            acenderled("VERMELHO")
+            escrever(1, "Obstaculo")
+            rotacionar (500, 50)
+            frente(300)
+            esperar(400)
+            rotacionar(500, negativo(50))
+            frente(300)
+            esperar(400)
+            rotacionar(500, negativo(50))
+        enquanto (cor(4) != "PRETO") farei {
+            frente(120)
+        }
+            frente(200)
+            esperar(400)
+        enquanto (luz(3) > 24) farei {
+            direita(900)
+        }
+    }
+
+}   
+
+tarefa seguirlinha{
+    se (cor(1) == "VERDE") entao{
+        frente(300)
+        esperar(300)
+        direita(1000)
+        esperar(800)
+    enquanto (luz(3) > 24) farei {
+        direita(1000)
+    }
+        esquerda(1000)
+        esperar(100)
+    }senao se (cor(4) == "VERDE") entao {
+        frente(300)
+        esperar(300)
+        esquerda(1000)
+        esperar(800)
+    enquanto (luz(2) > 24) farei {
+        esquerda(1000)
+    }
+        direita(1000)
+        esperar(100)
+    }senao se (cor(2) == "VERDE") entao{
+        frente(300)
+        esperar(300)
+        direita(1000)
+        esperar(700)
+    enquanto (luz(3) > 24) farei {
+        direita(1000)
+    }
+        esquerda(1000)
+        esperar(100)
+    }senao se (cor(3) == "VERDE") entao {
+        frente(300)
+        esperar(300)
+        esquerda(1000)
+        esperar(700)
+    enquanto (luz(2) > 24) farei {
+        esquerda(1000)
+    }
+        direita(1000)
+        esperar(100)
+    }senao se (luz(4) < 35) entao {
+        frente(300)
+        esperar(180)
+        zerartemporizador()
+    enquanto (temporizador() < 4000) farei {
+      se (luz(2) > 24) entao {
+        esquerda(700)
+    }senao se (luz(2) < 24) entao {
+        parar()
+    }
+    }
+        direita(1000)
+        esperar(100)
+    }senao se (luz(1) < 35) entao {
+        frente(300)
+        esperar(180)
+        zerartemporizador()
+    enquanto (temporizador() < 4000) farei {    
+        se (luz(3) > 24) entao {
+        direita(700)
+    }senao se (luz(3) < 24) entao {
+        parar()
+    } 
+    }
+        esquerda(1000) 
+        esperar(100)        
+    }senao se (luz(2) < 17) entao {
+        rotacionar(500,3)
+    }senao se (luz(3) < 17) entao {
+        rotacionar (500, negativo(3))
+    }senao{
+        frente(80)
+    }
+} 
+
+
+inicio
+        velocidadeatuador(150)
+        levantar(600)
+    enquanto (verdadeiro) farei {
+        seguirlinha()
+        obstaculo()
+        rampa()
+    }
+fim
